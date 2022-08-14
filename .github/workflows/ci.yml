@@ -72,6 +72,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.github_token }}
         release_name: ${{ steps.versioning.outputs.version }}
         tag_name: ${{ steps.versioning.outputs.version }}
-        prelease: true
+        prerelease: true
         text: 'Automatically created from CI'
       
