@@ -76,5 +76,6 @@ jobs:
         tag_name: ${{ steps.versioning.outputs.version }}
         prerelease: true
         draft: true
-        text: 'Automatically created from CI'
+        body: |
+          Automatically created from CI Actions Workflow
       
