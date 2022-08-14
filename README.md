@@ -18,3 +18,18 @@ This package creates [will] an .NET Core template(s) that [will] build out the b
     So that I get get up and running quickly 
     ```
 
+## Install
+
+Install (latest) Template and create new project:
+
+```powershell
+dotnet new --install Garrard.IoT.Templates
+dotnet new garrard-iot
+```
+
+## Uninstall
+
+```powershell
+dotnet new --uninstall Garrard.IoT.Templates
+```
+

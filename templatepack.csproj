@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>        
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.0.4</PackageVersion>
+    <PackageVersion>0.0.5</PackageVersion>
     <PackageId>Garrard.IoT.Templates</PackageId>
     <Title>Garrard's IoT Device Template</Title>
     <Authors>Garrard Kitchen</Authors>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="*.ps1;NOTES.md;README-CI.md;templates\**\bin\**;templates\**\obj\**;scripts\utils.ps1;templates\README.md" />
+    <Content Include="templates\**\*" Exclude="*.ps1;NOTES.md;README-CI.md;templates\**\bin\**;templates\**\obj\**;scripts\utils.ps1;templates\NOTES.md;templates\*.ps1" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
