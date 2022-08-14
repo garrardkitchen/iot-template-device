@@ -29,20 +29,20 @@ jobs:
     #  run: dotnet test --no-build --verbosity normal
     
     - name: Test install
-      run: 
+      run: |
         cd templates
         dotnet new --install .\
         dotnet new --list
     
     - name: Test new project
-      run:
+      run: |
         mkdir test
         cd test
         dotnet new garrard-iot 
         ls -lt
         
     - name: Test uninstall
-      run: 
+      run: |
         cd ..
         dotnet new --uninstall .\
     
