@@ -50,7 +50,7 @@ jobs:
     - name: Test nuget pack
       run: dotnet pack -c Release
 
-    - name: Database Version
+    - name: Version
       id: versioning
       uses: paulhatch/semantic-version@v4.0.2
       with:
@@ -63,7 +63,7 @@ jobs:
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}
-        tag_name: ${{ steps.versioning.outputs.version }}
+        # tag_name: ${{ steps.versioning.outputs.version }}
         release_name: ${{ steps.versioning.outputs.version }}
         prelease: true
       
