@@ -67,4 +67,5 @@ jobs:
         tag_name: ${{ steps.versioning.outputs.version }}
         release_name: ${{ steps.versioning.outputs.version }}
         prelease: true
+        text: 'Automatically created from CI'
       
