@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>iot_template_device</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageType>Template</PackageType>
+    <PackageVersion>0.0.1</PackageVersion>
+    <PackageId>Garrard.Templates.IoT.Device</PackageId>
+    <Title>Garrard's IoT Device Template</Title>
+    <Authors>Garrard Kitchen</Authors>
+    <Description>Templates to use when creating an IoT Device</Description>
+    <PackageTags>dotnet-new;templates;garrard;iot</PackageTags>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <!-- <IncludeBuildOutput>false</IncludeBuildOutput> -->
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>        
+    <Version>0.0.4</Version>
+    <PackageType>Template</PackageType>
+    <PackageVersion>0.0.4</PackageVersion>
+    <PackageId>Garrard.IoT.Templates</PackageId>
+    <Title>Garrard's IoT Device Template</Title>
+    <Authors>Garrard Kitchen</Authors>
+    <Description>Templates to use when creating an IoT Device</Description>
+    <PackageTags>dotnet-new;templates;garrard;iot</PackageTags>    
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <!-- <PackageLicenseExpression>MIT</PackageLicenseExpression> -->
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt" Pack="true" PackagePath=""/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="*.ps1;NOTES.md;README-CI.md;templates\**\bin\**;templates\**\obj\**;scripts\utils.ps1;templates\README.md" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+    <ItemGroup>
+       
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+       
+    </ItemGroup>
+
+</Project>
