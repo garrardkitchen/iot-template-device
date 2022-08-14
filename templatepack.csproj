@@ -18,6 +18,8 @@
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <!-- <PackageLicenseExpression>MIT</PackageLicenseExpression> -->
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/garrardkitchen/iot-template-device.git</RepositoryUrl>
+
   </PropertyGroup>
 
   <ItemGroup>
