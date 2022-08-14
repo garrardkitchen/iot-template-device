@@ -1,0 +1,51 @@
+name: .NET
+
+on:
+  push:
+    branches: ['*']
+#  pull_request:
+#    branches: [ "prelease" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore -c Release
+    
+    #- name: Test
+    #  run: dotnet test --no-build --verbosity normal
+    
+    - name: Test install
+      run: 
+        cd templates
+        dotnet new --install .\
+        dotnet new --list
+    
+    - name: Test new project
+      run:
+        mkdir test
+        cd test
+        dotnet new garrard-iot 
+        ls -lt
+        
+    - name: Test uninstall
+      run: 
+        cd ..
+        dotnet new --uninstall .\
+    
+    - name: Test nuget pack
+      run: dotnet pack -c Release
+    
