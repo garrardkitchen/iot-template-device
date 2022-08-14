@@ -43,8 +43,9 @@ jobs:
         
     - name: Test uninstall
       run: |
-        cd ..
+        cd templates
         dotnet new --uninstall .
+        dotnet new --list
     
     - name: Test nuget pack
       run: dotnet pack -c Release
